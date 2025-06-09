@@ -1,0 +1,127 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Apr 27 14:04:12 2025
+# Process ID: 352
+# Current directory: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12088 C:\Users\dell\Desktop\Tensor\2D_FFT_0_final\dma_test.xpr
+# Log file: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/vivado.log
+# Journal file: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 954.094 ; gain = 337.355
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sun Apr 27 14:08:36 2025] Launched synth_1...
+Run output will be captured here: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/synth_1/runme.log
+[Sun Apr 27 14:08:36 2025] Launched impl_1...
+Run output will be captured here: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+[Sun Apr 27 14:15:41 2025] Launched synth_1...
+Run output will be captured here: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+[Sun Apr 27 14:16:28 2025] Launched impl_1...
+Run output will be captured here: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sun Apr 27 14:22:58 2025] Launched synth_1...
+Run output will be captured here: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/synth_1/runme.log
+[Sun Apr 27 14:22:58 2025] Launched impl_1...
+Run output will be captured here: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/runme.log
+file copy -force C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.sysdef C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.sdk/top_wrapper.hdf
+
+launch_sdk -workspace C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.sdk -hwspec C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.sdk/top_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.sdk -hwspec C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.sdk/top_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210512180081
+set_property PROGRAM.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 3 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+Processed interface axis_data_fifo_1_M_AXIS_ila1_slot0
+Processed interface axis_data_fifo_0_M_AXIS_ila1_slot1
+Processed interface S_AXIS_0_1_ila1_slot2
+Processed interface axi_dma_0_M_AXIS_MM2S_ila1_slot3
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]]
+WARNING: Simulation object u_FFT_Top/ram_we was not found in the design.
+WARNING: Simulation object u_FFT_Top/col_fft_done was not found in the design.
+WARNING: Simulation object u_FFT_Top/fft_16_valid_out was not found in the design.
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/datapath_ins"}]]
+WARNING: Simulation object u_FFT_Top/m_axis_data_tlast was not found in the design.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2025-Apr-27 14:29:47
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Apr-27 14:29:52
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/datapath_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2025-Apr-27 14:29:57
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/datapath_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/datapath_ins"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2025-Apr-27 14:29:57
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.hw/backup/hw_ila_data_3.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2025-Apr-27 14:30:27
+Processed interface axis_data_fifo_1_M_AXIS_ila1_slot0
+Processed interface axis_data_fifo_0_M_AXIS_ila1_slot1
+Processed interface S_AXIS_0_1_ila1_slot2
+Processed interface axi_dma_0_M_AXIS_MM2S_ila1_slot3
+INFO: [Labtools 27-3304] ILA Waveform data saved to file C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_FFT_Top/m_axis_data_tlast -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]]
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {u_FFT_Top/m_axis_data_tlast} }
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes u_FFT_Top/m_axis_data_tlast -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_2' trigger was armed at 2025-Apr-27 14:34:13
+set_property PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 3 ILA core(s).
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.

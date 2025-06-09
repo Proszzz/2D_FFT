@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Apr 27 14:04:12 2025
+# Process ID: 352
+# Current directory: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12088 C:\Users\dell\Desktop\Tensor\2D_FFT_0_final\dma_test.xpr
+# Log file: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/vivado.log
+# Journal file: C:/Users/dell/Desktop/Tensor/2D_FFT_0_final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+file copy -force C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.sysdef C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.sdk/top_wrapper.hdf
+
+launch_sdk -workspace C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.sdk -hwspec C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.sdk/top_wrapper.hdf
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/datapath_ins"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/datapath_ins"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/datapath_ins"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/datapath_ins"}]]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"top_i/system_ila_0/inst/ila_lib"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_FFT_Top/m_axis_data_tlast -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]]
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {u_FFT_Top/m_axis_data_tlast} }
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes u_FFT_Top/m_axis_data_tlast -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_FFT_Top/control_ins"}]
+set_property PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/impl_1/top_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]

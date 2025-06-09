@@ -1,0 +1,49 @@
+$date
+        2025-Apr-27 14:29:58
+$end
+$version
+        Vivado v2018.3 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 13 " u_FFT_Top/ram_addr_write [12:0] $end
+$var reg 1 / u_FFT_Top/<const0>_1 $end
+$var reg 1 0 u_FFT_Top/<const0>_2 $end
+$var reg 13 1 u_FFT_Top/ram_addr_read [12:0] $end
+$var reg 1 > u_FFT_Top/<const0>_3 $end
+$var reg 1 ? u_FFT_Top/<const0> $end
+$var reg 32 @ u_FFT_Top/ram_data_in [31:0] $end
+$var reg 32 ` u_FFT_Top/ram_data_out [31:0] $end
+$var reg 32 "" u_FFT_Top/s_axis_data_tdata [31:0] $end
+$var reg 32 B" u_FFT_Top/fft_256_data_out [31:0] $end
+$var reg 32 b" u_FFT_Top/fft_16_data_out_1 [31:0] $end
+$var reg 32 $# u_FFT_Top/fft_16_data_out [31:0] $end
+$var reg 1 D# u_FFT_Top/fft_16_valid_out $end
+$var reg 1 E# _TRIGGER $end
+$var reg 1 F# _WINDOW $end
+$var reg 1 G# _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+0/
+00
+b0 1
+0>
+0?
+b0 @
+b0 `
+b0 ""
+b0 B"
+b0 b"
+b0 $#
+0D#
+0E#
+1F#
+0G#
+$end
+#4096
+1E#
