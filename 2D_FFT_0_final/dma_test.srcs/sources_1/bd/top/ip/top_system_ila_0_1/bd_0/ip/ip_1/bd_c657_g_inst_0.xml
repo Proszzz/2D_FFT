@@ -34,7 +34,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>aclk frequency</spirit:displayName>
           <spirit:description>aclk frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SIGNAL_CLOCK.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SIGNAL_CLOCK.FREQ_HZ">100000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
@@ -906,7 +906,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_0_AXIS.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_0_AXIS.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1768,7 +1768,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_1_AXIS.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_1_AXIS.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -2630,7 +2630,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_2_AXIS.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_2_AXIS.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3492,7 +3492,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_3_AXIS.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SLOT_3_AXIS.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -18146,7 +18146,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -19008,7 +19008,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -19870,7 +19870,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -20732,7 +20732,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_3_AXIS.FREQ_HZ">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_SLOT_3_AXIS.FREQ_HZ">100000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -31143,11 +31143,11 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 25 05:52:34 UTC 2025</spirit:value>
+            <spirit:value>Thu Jun 19 03:28:37 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d8d3bc1c</spirit:value>
+            <spirit:value>9:70c295af</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31158,7 +31158,7 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d8d3bc1c</spirit:value>
+            <spirit:value>9:70c295af</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31174,11 +31174,11 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 25 05:52:34 UTC 2025</spirit:value>
+            <spirit:value>Thu Jun 19 03:28:37 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d8d3bc1c</spirit:value>
+            <spirit:value>9:70c295af</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31194,11 +31194,11 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 25 05:52:34 UTC 2025</spirit:value>
+            <spirit:value>Thu Jun 19 03:28:37 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d5436465</spirit:value>
+            <spirit:value>9:0c8c3002</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31214,11 +31214,11 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 25 05:52:34 UTC 2025</spirit:value>
+            <spirit:value>Thu Jun 19 03:28:37 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:d5436465</spirit:value>
+            <spirit:value>9:0c8c3002</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -113792,7 +113792,6 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
       <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.HAS_TKEEP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.HAS_TLAST" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -113802,7 +113801,6 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.TID_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_0_AXIS.TUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.HAS_TKEEP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.HAS_TLAST" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -113812,7 +113810,6 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.TID_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_1_AXIS.TUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.HAS_TKEEP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.HAS_TLAST" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -113822,7 +113819,6 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.TID_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_2_AXIS.TUSER_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_3_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_3_AXIS.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_3_AXIS.HAS_TKEEP" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_3_AXIS.HAS_TLAST" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_SLOT_3_AXIS.HAS_TREADY" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -113834,7 +113830,6 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SIGNAL_CLOCK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SIGNAL_CLOCK.FREQ_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXIS.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXIS.HAS_TKEEP" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXIS.HAS_TLAST" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXIS.HAS_TREADY" xilinx:valuePermission="bd"/>
@@ -113844,7 +113839,6 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXIS.TID_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXIS.TUSER_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_1_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_1_AXIS.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_1_AXIS.HAS_TKEEP" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_1_AXIS.HAS_TLAST" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_1_AXIS.HAS_TREADY" xilinx:valuePermission="bd"/>
@@ -113854,7 +113848,6 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_1_AXIS.TID_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_1_AXIS.TUSER_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_2_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_2_AXIS.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_2_AXIS.HAS_TKEEP" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_2_AXIS.HAS_TLAST" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_2_AXIS.HAS_TREADY" xilinx:valuePermission="bd"/>
@@ -113864,7 +113857,6 @@ lot_5_axi:slot_6_axi:slot_7_axi:slot_8_axi:slot_9_axi:slot_10_axi:slot_11_axi:sl
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_2_AXIS.TID_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_2_AXIS.TUSER_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_3_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_3_AXIS.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_3_AXIS.HAS_TKEEP" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_3_AXIS.HAS_TLAST" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_3_AXIS.HAS_TREADY" xilinx:valuePermission="bd"/>

@@ -1041,10 +1041,33 @@
 						"ACLK": { "actual": "clk"},
 						"ARESETN": { "actual": "resetn"},
 						"TDATA": { "actual": "SLOT_1_AXIS_tdata"},
-						"TKEEP": { "actual": "SLOT_1_AXIS_tkeep"},
 						"TLAST": { "actual": "SLOT_1_AXIS_tlast"},
 						"TREADY": { "actual": "SLOT_1_AXIS_tready"},
 						"TVALID": { "actual": "SLOT_1_AXIS_tvalid"}
+					}
+				},
+				"/system_ila_0/SLOT_2_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "resetn"},
+						"TDATA": { "actual": "SLOT_2_AXIS_tdata"},
+						"TKEEP": { "actual": "SLOT_2_AXIS_tkeep"},
+						"TLAST": { "actual": "SLOT_2_AXIS_tlast"},
+						"TREADY": { "actual": "SLOT_2_AXIS_tready"},
+						"TVALID": { "actual": "SLOT_2_AXIS_tvalid"}
+					}
+				},
+				"/system_ila_0/SLOT_3_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "resetn"},
+						"TDATA": { "actual": "SLOT_3_AXIS_tdata"},
+						"TKEEP": { "actual": "SLOT_3_AXIS_tkeep"},
+						"TLAST": { "actual": "SLOT_3_AXIS_tlast"},
+						"TREADY": { "actual": "SLOT_3_AXIS_tready"},
+						"TVALID": { "actual": "SLOT_3_AXIS_tvalid"}
 					}
 				}
 			}

@@ -28,13 +28,18 @@ localparam DONE      = 3'd4;
 reg [2:0] current_state, next_state;
 
 // 行列计数器
-reg [4:0]  row_count;     // 0 ~ 15
-reg [8:0]  col_count;     // 0 ~ 255
-reg [8:0]  data_count;    // 计数器复用
-reg [3:0]  wait_cycles;   // 增加等待周期位宽，便于更灵活调整
-reg        row_fft_done;  // 行FFT完成标志
-reg        col_fft_done;  // 列FFT完成标志
-reg        output_valid;  // 输出有效标志
+reg [4:0]  row_count;        // 0 ~ 15
+reg [8:0]  col_count;        // 0 ~ 255
+reg [8:0]  data_count;       // 计数器复用
+reg [3:0]  wait_cycles;      // 增加等待周期位宽，便于更灵活调整
+reg        row_fft_done;     // 行FFT完成标志
+reg        col_fft_done;     // 列FFT完成标志（基于输入）
+
+// 新增：基于输出的计数器和完成标志
+reg [8:0]  output_col_count; // 输出列计数 0 ~ 255
+reg [4:0]  output_data_count;// 输出数据计数 0 ~ 15
+reg        col_output_done;  // 列FFT输出完成标志
+reg [11:0] total_output_count; // 总输出计数器 0 ~ 4095
 
 // 第一级 FFT (256点) 接口
 wire [31:0] fft_256_data_out;
@@ -85,7 +90,8 @@ always @(*) begin
         end
 
         COL_FFT: begin
-            if (col_fft_done &&wait_cycles>=4'd6 )  // 增加结束前的等待周期
+            // 修改：基于实际输出完成情况判断
+            if (col_output_done && wait_cycles >= 4'd6)
                 next_state = DONE;
         end
 
@@ -111,7 +117,7 @@ always @(posedge aclk or negedge aresetn) begin
     end
 end
 
-// 列FFT完成标志控制
+// 列FFT输入完成标志控制（原有逻辑保留，用于控制输入）
 always @(posedge aclk or negedge aresetn) begin
     if (!aresetn) begin
         col_fft_done <= 1'b0;
@@ -125,14 +131,48 @@ always @(posedge aclk or negedge aresetn) begin
     end
 end
 
-// 行列计数 & 等待计数
+// 新增：列FFT输出完成标志控制（基于实际输出）
+always @(posedge aclk or negedge aresetn) begin
+    if (!aresetn) begin
+        col_output_done <= 1'b0;
+        output_col_count <= 9'd0;
+        output_data_count <= 5'd0;
+        total_output_count <= 12'd0;
+    end else begin
+        if (current_state == COL_FFT) begin
+            // 当16点FFT有有效输出且被接收时，更新输出计数
+            if (fft_16_valid_out && m_axis_data_tready) begin
+                total_output_count <= total_output_count + 1'b1;
+                
+                if (output_data_count == (COL_SIZE-1)) begin
+                    output_data_count <= 5'd0;
+                    if (output_col_count == (ROW_SIZE-1)) begin
+                        output_col_count <= 9'd0;
+                        col_output_done <= 1'b1;  // 所有数据都已输出
+                    end else begin
+                        output_col_count <= output_col_count + 1'b1;
+                    end
+                end else begin
+                    output_data_count <= output_data_count + 1'b1;
+                end
+            end
+        end else begin
+            // 重置输出计数器
+            col_output_done <= 1'b0;
+            output_col_count <= 9'd0;
+            output_data_count <= 5'd0;
+            total_output_count <= 12'd0;
+        end
+    end
+end
+
+// 行列计数 & 等待计数（输入侧计数）
 always @(posedge aclk or negedge aresetn) begin
     if (!aresetn) begin
         row_count   <= 0;
         col_count   <= 0;
         data_count  <= 0;
         wait_cycles <= 0;
-      //  output_valid <= 0;
     end else begin
         case (current_state)
             IDLE: begin
@@ -140,7 +180,6 @@ always @(posedge aclk or negedge aresetn) begin
                 col_count   <= 0;
                 data_count  <= 0;
                 wait_cycles <= 0;
-             //   output_valid <= 0;
             end
             
             ROW_FFT: begin
@@ -161,16 +200,15 @@ always @(posedge aclk or negedge aresetn) begin
 
             ROW_WAIT: begin
                 wait_cycles <= wait_cycles + 1;
-                if (wait_cycles >= 4'd6) begin  // 在切换到下一状态前完全重置
+                if (wait_cycles >= 4'd6) begin
                     data_count <= 0;
                     col_count <= 0;
                 end
             end
 
             COL_FFT: begin
-                if (col_fft_done) begin
+                if (col_output_done) begin  // 修改：基于输出完成标志
                     wait_cycles <= wait_cycles + 1;
-                  //  output_valid <= 1;  // 当列FFT全部完成后设置输出有效标志
                 end
                 else if (fft_16_ready_out && ram_data_valid) begin
                     if (data_count == (COL_SIZE-1)) begin
@@ -187,7 +225,6 @@ always @(posedge aclk or negedge aresetn) begin
             end
 
             DONE: begin
-              //  output_valid <= 0;
                 wait_cycles <= 0;
             end
             
@@ -196,7 +233,6 @@ always @(posedge aclk or negedge aresetn) begin
                 col_count   <= 0;
                 data_count  <= 0;
                 wait_cycles <= 0;
-              //  output_valid <= 0;
             end
         endcase
     end
@@ -226,7 +262,7 @@ always @(posedge aclk or negedge aresetn) begin
         ram_addr_read <= 13'd0;
     end else begin
         if (current_state == COL_FFT) begin
-            if (fft_16_ready_out && !col_fft_done) begin
+            if (fft_16_ready_out && !col_fft_done) begin  // 基于输入完成标志控制读取
                 // 转置访问 - 直接按列读取RAM
                 ram_addr_read <= data_count * ROW_SIZE + col_count;
             end
@@ -252,7 +288,7 @@ always @(posedge aclk or negedge aresetn) begin
             
             // 处理RAM读取延迟
             if (ram_read_active) begin
-                if (ram_read_delay < 2'd2) begin  // 增加额外的延迟周期以确保稳定
+                if (ram_read_delay < 2'd2) begin
                     ram_read_delay <= ram_read_delay + 1'b1;
                     ram_data_valid <= 1'b0;
                 end else begin
@@ -282,7 +318,7 @@ FFT_Top_256 u_fft_256 (
     .s_axis_data_tlast  (data_count == ROW_SIZE-1),
     .m_axis_data_tdata  (fft_256_data_out),
     .m_axis_data_tvalid (fft_256_valid_out),
-    .m_axis_data_tready (ram_we || (current_state != ROW_FFT)),  // 修改ready条件
+    .m_axis_data_tready (ram_we || (current_state != ROW_FFT)),
     .m_axis_data_tlast  (fft_256_last_out)
 );
 
@@ -296,7 +332,7 @@ FFT_Top_16 u_fft_16 (
     .s_axis_data_tlast  (data_count == COL_SIZE-1),
     .m_axis_data_tdata  (fft_16_data_out),
     .m_axis_data_tvalid (fft_16_valid_out),
-    .m_axis_data_tready (m_axis_data_tready || (current_state != COL_FFT)),  // 优化ready条件
+    .m_axis_data_tready (m_axis_data_tready || (current_state != COL_FFT)),
     .m_axis_data_tlast  (fft_16_last_out)
 );
 
@@ -308,12 +344,12 @@ dual_port_ram u_ram (
     .addra (ram_addr_write),
     .dina  (ram_data_in),
     .clkb  (aclk),
-    .enb   (current_state == COL_FFT),  // 只在列FFT阶段使能RAM读取
+    .enb   (current_state == COL_FFT),
     .addrb (ram_addr_read),
     .doutb (ram_data_out)
 );
 
-// ILA实例1 - 控制信号监控
+// ILA实例1 - 控制信号监控（新增输出相关信号）
 ila_0 control_ins (
     .clk(aclk),
     .probe0(current_state),
@@ -322,12 +358,12 @@ ila_0 control_ins (
     .probe3(col_count),
     .probe4(data_count),
     .probe5(col_fft_done),
-    .probe6(s_axis_data_tvalid),
-    .probe7(s_axis_data_tready),
-    .probe8(fft_256_valid_out),
-    .probe9(fft_256_ready_out),
-    .probe10(fft_16_valid_out),
-    .probe11(m_axis_data_tlast)
+    .probe6(ram_addr_read),        // 新增
+    .probe7(fft_16_data_out),       // 新增
+    .probe8(ram_read_delay),      // 新增
+    .probe9(ram_data_valid),     // 新增
+    .probe10(fft_16_ready_out),
+    .probe11(ram_data_out)
 );
 
 // ILA实例2 - 数据路径监控
@@ -341,13 +377,17 @@ ila_1 datapath_ins (
     .probe5(fft_256_data_out),
     .probe6(fft_16_data_out),
     .probe7(m_axis_data_tdata),
-    .probe8(fft_16_valid_out)
+    .probe8(fft_16_valid_out),
+	.probe9(ram_data_valid)
 );
 
-// 输出信号赋值 - 修改输出有效条件
+// 修改后的输出信号赋值 - 基于实际输出状态
 assign m_axis_data_tvalid = (current_state == COL_FFT) && fft_16_valid_out;
-assign m_axis_data_tlast  = (current_state == COL_FFT)  &&  col_fft_done;
+assign m_axis_data_tlast  = (current_state == COL_FFT) && fft_16_valid_out && 
+                           (total_output_count == 12'd4095); // 基于总输出计数判断最后一个数据
 assign m_axis_data_tdata  = fft_16_data_out;
 assign s_axis_data_tready = (current_state == ROW_FFT) && fft_256_ready_out;
 
 endmodule
+
+

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Thu Apr 24 12:47:54 2025
+-- Date        : Thu Apr 24 12:47:53 2025
 -- Host        : DESKTOP-MFVSKC9 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.srcs/sources_1/ip/xfft_1/xfft_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top xfft_1 -prefix
+--               xfft_1_ xfft_1_stub.vhdl
 -- Design      : xfft_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-2

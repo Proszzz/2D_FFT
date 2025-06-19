@@ -55,8 +55,8 @@ int main(void)
     
     // 准备发送数据
     for(int i = 0; i < TOTAL_POINTS; i++) {
-        TxBufferPtr[i] = ((u32)(sarData[i].real & 0xFFFF) << 16) |
-                         (sarData[i].imag & 0xFFFF);
+        TxBufferPtr[i] = ((u32)(sarData[i].imag & 0xFFFF) << 16) |
+                         (sarData[i].real & 0xFFFF);
     }
     
     // 刷新缓存

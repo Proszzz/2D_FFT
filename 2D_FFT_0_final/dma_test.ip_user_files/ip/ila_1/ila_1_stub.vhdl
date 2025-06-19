@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Wed Jan  8 18:27:46 2025
+-- Date        : Wed Jun 18 10:09:04 2025
 -- Host        : DESKTOP-MFVSKC9 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               C:/Users/dell/Desktop/15_dma_loopback/dma_test.srcs/sources_1/ip/ila_1/ila_1_stub.vhdl
+--               C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.srcs/sources_1/ip/ila_1/ila_1_stub.vhdl
 -- Design      : ila_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-2
@@ -23,7 +23,8 @@ entity ila_1 is
     probe5 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe6 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe7 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 )
+    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
 
 end ila_1;
@@ -32,7 +33,7 @@ architecture stub of ila_1 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk,probe0[14:0],probe1[14:0],probe2[31:0],probe3[31:0],probe4[31:0],probe5[31:0],probe6[31:0],probe7[31:0],probe8[0:0]";
+attribute black_box_pad_pin of stub : architecture is "clk,probe0[14:0],probe1[14:0],probe2[31:0],probe3[31:0],probe4[31:0],probe5[31:0],probe6[31:0],probe7[31:0],probe8[0:0],probe9[0:0]";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "ila,Vivado 2018.3";
 begin

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/synth_1'
+HD_PWD='C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

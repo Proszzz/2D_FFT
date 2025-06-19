@@ -88,6 +88,7 @@
   "../../../bd/top/ip/top_rst_clk_wiz_100M_0/sim/top_rst_clk_wiz_100M_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/top/ip/top_system_ila_0_1/bd_0/sim/bd_c657.v" \
   "../../../bd/top/ip/top_system_ila_0_1/bd_0/ip/ip_0/sim/bd_c657_ila_lib_0.v" \
 -endlib
 -makelib xcelium_lib/gigantic_mux \
@@ -96,7 +97,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/top/ip/top_system_ila_0_1/bd_0/ip/ip_1/bd_c657_g_inst_0_gigantic_mux.v" \
   "../../../bd/top/ip/top_system_ila_0_1/bd_0/ip/ip_1/sim/bd_c657_g_inst_0.v" \
-  "../../../bd/top/ip/top_system_ila_0_1/bd_0/sim/bd_c657.v" \
   "../../../bd/top/ip/top_system_ila_0_1/sim/top_system_ila_0_1.v" \
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \

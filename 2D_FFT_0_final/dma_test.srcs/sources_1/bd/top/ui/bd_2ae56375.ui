@@ -21,16 +21,16 @@ preplace netloc processing_system7_0_DDR 1 5 2 NJ 440 NJ
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 200 620 NJ 620 NJ 620 NJ 620 1850
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 7 -180 660 NJ 660 NJ 660 NJ 660 NJ 660 1880 540 NJ
 preplace netloc axi_dma_0_s2mm_introut 1 3 1 980
-preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 1000
 preplace netloc S_AXIS_0_1 1 0 6 NJ 450 160J 140 N 140 N 140 N 140 1850
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 1000
 preplace netloc rst_clk_wiz_100M_interconnect_aresetn 1 1 4 170 550 NJ 550 960 170 1360
 preplace netloc xlconcat_0_dout 1 4 1 1350
 preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 460 NJ
 preplace netloc axi_dma_0_mm2s_introut 1 3 1 950
 preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 970
 preplace netloc axi_interconnect_0_M00_AXI 1 4 1 N
-preplace netloc axis_data_fifo_1_M_AXIS 1 2 4 550 160 N 160 N 160 1840
 preplace netloc axis_data_fifo_0_M_AXIS 1 5 2 1860J 330 2090
+preplace netloc axis_data_fifo_1_M_AXIS 1 2 4 550 160 N 160 N 160 1840
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 7 -180 460 180 380 560 490 1020 630 1360 350 1880 480 NJ
 preplace netloc axi_dma_0_M_AXIS_MM2S 1 3 3 990 320 1370J 330 1870
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 560

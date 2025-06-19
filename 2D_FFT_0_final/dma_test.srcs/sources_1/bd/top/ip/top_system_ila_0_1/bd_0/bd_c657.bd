@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA349283E00502719",
+      "boundary_crc": "0xA349283E8AB31BAC",
       "design_src": "SBD",
       "device": "xc7z020clg400-2",
       "name": "bd_c657",
@@ -24,7 +24,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "90909088",
+            "value": "100000000",
             "value_src": "default"
           },
           "HAS_TKEEP": {
@@ -82,7 +82,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "90909088",
+            "value": "100000000",
             "value_src": "default"
           },
           "HAS_TKEEP": {
@@ -140,7 +140,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "90909088",
+            "value": "100000000",
             "value_src": "default"
           },
           "HAS_TKEEP": {
@@ -198,7 +198,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "90909088",
+            "value": "100000000",
             "value_src": "default"
           },
           "HAS_TKEEP": {
@@ -264,8 +264,8 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "90909088",
-            "value_src": "default_prop"
+            "value": "100000000",
+            "value_src": "default"
           },
           "INSERT_VIP": {
             "value": "0",
@@ -316,7 +316,7 @@
             "value": "0"
           },
           "C_ILA_CLK_FREQ": {
-            "value": "90909088"
+            "value": "100000000"
           },
           "C_INPUT_PIPE_STAGES": {
             "value": "0"
@@ -577,16 +577,16 @@
           "g_inst/slot_0_axis"
         ]
       },
-      "Conn1": {
-        "interface_ports": [
-          "SLOT_1_AXIS",
-          "g_inst/slot_1_axis"
-        ]
-      },
       "Conn3": {
         "interface_ports": [
           "SLOT_3_AXIS",
           "g_inst/slot_3_axis"
+        ]
+      },
+      "Conn1": {
+        "interface_ports": [
+          "SLOT_1_AXIS",
+          "g_inst/slot_1_axis"
         ]
       },
       "Conn2": {

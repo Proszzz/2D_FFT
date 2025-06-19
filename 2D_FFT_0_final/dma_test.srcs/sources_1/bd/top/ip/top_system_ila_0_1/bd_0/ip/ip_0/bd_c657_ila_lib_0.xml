@@ -91,7 +91,7 @@
           <spirit:name>FREQ_HZ</spirit:name>
           <spirit:displayName>clk frequency</spirit:displayName>
           <spirit:description>clk frequency</spirit:description>
-          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SIGNAL_CLOCK.FREQ_HZ" spirit:minimum="1" spirit:maximum="1000000000" spirit:rangeType="long">90909088</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SIGNAL_CLOCK.FREQ_HZ" spirit:minimum="1" spirit:maximum="1000000000" spirit:rangeType="long">100000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
@@ -1025,11 +1025,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 25 05:52:32 UTC 2025</spirit:value>
+            <spirit:value>Thu Jun 19 03:28:34 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e90f6479</spirit:value>
+            <spirit:value>9:c6d55d73</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1040,7 +1040,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e90f6479</spirit:value>
+            <spirit:value>9:c6d55d73</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1056,11 +1056,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 25 05:52:32 UTC 2025</spirit:value>
+            <spirit:value>Thu Jun 19 03:28:35 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e90f6479</spirit:value>
+            <spirit:value>9:c6d55d73</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1076,11 +1076,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 25 05:52:32 UTC 2025</spirit:value>
+            <spirit:value>Thu Jun 19 03:28:35 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:bed729d5</spirit:value>
+            <spirit:value>9:3cc0f3de</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1095,11 +1095,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Apr 25 05:52:32 UTC 2025</spirit:value>
+            <spirit:value>Thu Jun 19 03:28:35 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e90f6479</spirit:value>
+            <spirit:value>9:c6d55d73</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -69538,7 +69538,7 @@
     <spirit:parameter>
       <spirit:name>C_ILA_CLK_FREQ</spirit:name>
       <spirit:displayName>Clk Freq</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ILA_CLK_FREQ" spirit:order="206123">90909088</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_ILA_CLK_FREQ" spirit:order="206123">100000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_CLK_PERIOD</spirit:name>
@@ -74820,7 +74820,6 @@
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SIGNAL_CLOCK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SIGNAL_CLOCK.FREQ_HZ" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXI.ADDR_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXI.ARUSER_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SLOT_0_AXI.AWUSER_WIDTH" xilinx:valuePermission="bd"/>

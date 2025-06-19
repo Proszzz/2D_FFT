@@ -14,7 +14,7 @@ module FFT_Top_16 (
     xfft_1 u_xfft_1 (
         .aclk(aclk),
         .aresetn(aresetn),
-		.s_axis_config_tdata(16'h0000),  // 直接连接常量
+		.s_axis_config_tdata(16'h0101),  // 直接连接常量
         .s_axis_config_tvalid(1'b1),     // 始终有效
         .s_axis_config_tready(),         // 不使用可以悬空
         .s_axis_data_tdata(s_axis_data_tdata),

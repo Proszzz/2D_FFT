@@ -65,25 +65,23 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg400-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.cache/wt [current_project]
-  set_property parent.project_path C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.xpr [current_project]
-  set_property ip_output_repo C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.cache/wt [current_project]
+  set_property parent.project_path C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.xpr [current_project]
+  set_property ip_output_repo C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.runs/synth_1/top_wrapper.dcp
+  add_files -quiet C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.runs/synth_1/top_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.srcs/sources_1/bd/top/top.bd
-  read_ip -quiet C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.srcs/sources_1/ip/xfft_0/xfft_0.xci
-  read_ip -quiet C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.srcs/sources_1/ip/dual_port_ram/dual_port_ram.xci
-  read_ip -quiet C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.srcs/sources_1/ip/ila_1/ila_1.xci
-  read_ip -quiet C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.srcs/sources_1/ip/xfft_1/xfft_1.xci
-  read_ip -quiet C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.srcs/sources_1/ip/ila_0/ila_0.xci
+  read_ip -quiet C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.srcs/sources_1/ip/xfft_1/xfft_1.xci
+  read_ip -quiet C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.srcs/sources_1/ip/xfft_0/xfft_0.xci
+  add_files C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.srcs/sources_1/bd/top/top.bd
+  read_ip -quiet C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.srcs/sources_1/ip/dual_port_ram/dual_port_ram.xci
+  read_ip -quiet C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.srcs/sources_1/ip/ila_1/ila_1.xci
+  read_ip -quiet C:/Users/dell/Desktop/42/2D_FFT_0_final/dma_test.srcs/sources_1/ip/ila_0/ila_0.xci
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top top_wrapper -part xc7z020clg400-2

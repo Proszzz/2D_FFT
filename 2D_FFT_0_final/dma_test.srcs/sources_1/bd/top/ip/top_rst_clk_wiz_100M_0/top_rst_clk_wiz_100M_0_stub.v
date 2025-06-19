@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Apr 24 14:17:18 2025
+// Date        : Tue Jan  7 14:03:52 2025
 // Host        : DESKTOP-MFVSKC9 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               C:/Users/dell/Desktop/Tensor/2D_FFT_0_final/dma_test.srcs/sources_1/bd/top/ip/top_rst_clk_wiz_100M_0/top_rst_clk_wiz_100M_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top top_rst_clk_wiz_100M_0 -prefix
+//               top_rst_clk_wiz_100M_0_ top_rst_clk_wiz_100M_0_stub.v
 // Design      : top_rst_clk_wiz_100M_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-2

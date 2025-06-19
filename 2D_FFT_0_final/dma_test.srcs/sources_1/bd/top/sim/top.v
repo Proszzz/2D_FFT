@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Fri Apr 25 13:52:31 2025
+//Date        : Thu Jun 19 11:28:20 2025
 //Host        : DESKTOP-MFVSKC9 running 64-bit major release  (build 9200)
 //Command     : generate_target top.bd
 //Design      : top
@@ -1108,7 +1108,7 @@ module top
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RAS_N" *) inout DDR_ras_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RESET_N" *) inout DDR_reset_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR WE_N" *) inout DDR_we_n;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.FCLK_CLK0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.FCLK_CLK0, ASSOCIATED_BUSIF M_AXIS_TO_PL:S_AXIS_TO_PS, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 90909088, INSERT_VIP 0, PHASE 0.000" *) output FCLK_CLK0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.FCLK_CLK0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.FCLK_CLK0, ASSOCIATED_BUSIF M_AXIS_TO_PL:S_AXIS_TO_PS, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) output FCLK_CLK0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.FCLK_RESET0_N RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.FCLK_RESET0_N, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output FCLK_RESET0_N;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false" *) inout FIXED_IO_ddr_vrn;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP" *) inout FIXED_IO_ddr_vrp;
@@ -1116,11 +1116,11 @@ module top
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_TO_PL TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_TO_PL, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 90909088, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [31:0]M_AXIS_TO_PL_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_TO_PL TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_TO_PL, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) output [31:0]M_AXIS_TO_PL_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_TO_PL TLAST" *) output M_AXIS_TO_PL_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_TO_PL TREADY" *) input M_AXIS_TO_PL_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_TO_PL TVALID" *) output M_AXIS_TO_PL_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_TO_PS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_TO_PS, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 90909088, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [31:0]S_AXIS_TO_PS_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_TO_PS TDATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_TO_PS, CLK_DOMAIN top_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, HAS_TKEEP 1, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 0, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0" *) input [31:0]S_AXIS_TO_PS_tdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_TO_PS TLAST" *) input S_AXIS_TO_PS_tlast;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_TO_PS TREADY" *) output S_AXIS_TO_PS_tready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_TO_PS TVALID" *) input S_AXIS_TO_PS_tvalid;
